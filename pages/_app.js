@@ -8,6 +8,8 @@ import '../Components/Review/review.modules.css';
 import '../Components/About/about.modules.css';
 import '../Components/Team/team.modules.css';
 import '../Components/Footer/footer.modules.css';
+import Navigation from '../Components/Navigation';
+import Footer from '../Components/Footer';
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -20,8 +22,18 @@ function MyApp({ Component, pageProps }) {
         <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5" />
         <meta name="msapplication-TileColor" content="#2d89ef" />
         <meta name="theme-color" content="#ffffff" />
+
+        {/* OG Image */}
+        <meta property="og:title" content="The Bubbly Pug" />
+        <meta property="og:site_name" content="The Bubbly Pug" />
+        <meta property="og:url" content="https://bubbly-pug.vercel.app" />
+        <meta property="og:description" content="The Bubbly Pug" />
+        <meta property="og:type" content="business.business" />
+        <meta property="og:image" content="https://res.cloudinary.com/aladd93/image/upload/v1657785827/bubbly-pug-icon_rwx7l5.png" />
       </Head>
+      <Navigation />
       <Component {...pageProps} />
+      <Footer />
     </>
   )
 }
