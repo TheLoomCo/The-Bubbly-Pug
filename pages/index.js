@@ -1,8 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import { FaPaw } from 'react-icons/fa'
-import { BsFacebook, BsInstagram, BsTelephoneFill, BsTwitter } from 'react-icons/bs';
 import { MdLocationPin } from 'react-icons/md'
+import HeroSection from '../Components/Hero';
 
 export default function Home() {
   return (
@@ -11,7 +10,8 @@ export default function Home() {
         <title>The Bubbly Pug | Home</title>
         <meta type="description" content="" />
       </Head>
-
+      <HeroSection title={`Welcome to
+the Bubbly Pug`} cta="Book a Meet and Greet!" />
     </div>
   )
 }
