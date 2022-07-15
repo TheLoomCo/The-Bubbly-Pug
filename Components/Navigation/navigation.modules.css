@@ -76,7 +76,7 @@
     background-color: #001B26;
     row-gap: 50px;
     font-size: 1.2rem;
-    height: 100vh;
+    height: calc(100vh - 90px);
     width: 100%;
     position: absolute;
 }

@@ -3,8 +3,8 @@ import Image from 'next/image'
 import { MdLocationPin } from 'react-icons/md'
 import BehindTheScenes from '../Components/BehindTheScenes';
 import Gallery from '../Components/Gallery';
-// import HeroSection from '../Components/Hero';
-import HeroSection from '../Components/Hero-2';
+import HeroSection from '../Components/Hero';
+// import HeroSection from '../Components/Hero-2';
 import Review from '../Components/Review';
 
 export default function Home() {

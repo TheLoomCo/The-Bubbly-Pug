@@ -2,8 +2,8 @@ import '../styles/globals.css'
 import Head from 'next/head'
 
 import '../Components/Navigation/navigation.modules.css';
-// import '../Components/Hero/hero.modules.css';
-import '../Components/Hero-2/hero-2.modules.css';
+import '../Components/Hero/hero.modules.css';
+// import '../Components/Hero-2/hero-2.modules.css';
 import '../Components/BehindTheScenes/behindthescenes.modules.css'
 import '../Components/Gallery/gallery.modules.css';
 import '../Components/Review/review.modules.css';
