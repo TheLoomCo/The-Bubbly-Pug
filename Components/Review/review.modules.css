@@ -1,0 +1,14 @@
+.review-styling__wrapper {
+    width:100%;
+    border: solid;
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+    background-color: #001B26;
+    color: #fff;
+}
+
+.review {
+    max-width: 1000px;
+    text-align: center;
+}
