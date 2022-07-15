@@ -6,13 +6,17 @@ const PetProfileForm = () => {
         <div className="pet-profile__section">
             <h1 className='pet-profile__header'>Pet P<span><FaPaw /></span>file</h1>
             <form className='pet-profile__form'>
-                {/* For the profile image, wrap the input in the label and have it say "Your Photo Here" rather than the default image upload input appearance */}
 
                 {/* Medications, neutered / spayed (checkbox), delete profile button  */}
-                <fieldset className='image-upload__fieldset'>
-                    <label htmlFor="image" className='pet-profile__label image-upload__label'>
-                        <input id="image" className='pet-profile__input image-upload__input' type="file" />
-                        Your Photo Here</label>
+                <fieldset class="pet-profile__fieldset">
+                    <label htmlFor="petPhoto" class="pet-profile-image-upload__label">
+                        <pre class="text">
+                            {`Click to Upload 
+Your Pet's Favorite Photo!`}
+                        </pre>
+                    </label>
+                    {/* <button id="custom-btn">Choose a file</button> */}
+                    <input id="petPhoto" type="file" hidden />
                 </fieldset>
 
                 <fieldset className='pet-name__fieldset'>

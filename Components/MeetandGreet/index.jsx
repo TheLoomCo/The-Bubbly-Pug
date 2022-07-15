@@ -3,7 +3,7 @@ import { FaPaw } from 'react-icons/fa'
 
 const MeetandGreetForm = () => {
     return (
-        <div className="meet-and-greet__section">
+        <section id="meetAndGreet" className="meet-and-greet__section">
             <h1 className='meet-and-greet__header'>Book Your Meet and Greet!</h1>
             <form className='meet-and-greet__form'>
                 <fieldset>
@@ -26,7 +26,7 @@ const MeetandGreetForm = () => {
                 <button className='meet-and-greet__submit' type="submit"><FaPaw /> Book Now <FaPaw /></button>
 
             </form>
-        </div >
+        </section >
     )
 }
 

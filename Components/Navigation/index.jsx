@@ -4,7 +4,6 @@ import { useRouter } from 'next/router';
 import { NavLinkData } from './NavLinkData';
 import Image from 'next/image'
 
-import { BsFacebook, BsInstagram, BsTwitter } from 'react-icons/bs';
 
 const Navigation = () => {
     const router = useRouter();
@@ -15,14 +14,11 @@ const Navigation = () => {
         <div className='navbar-style__wrapper'>
             <nav id="navigation" className="navbar">
 
-
-
                 <Link href="/">
                     <a className="nav-logo__desktop">
                         <Image src='/images/logo/logo.png' alt="The Bubbly Pug" height={60} width={52.44} />
                     </a>
                 </Link>
-
 
                 <Link href="/">
                     <a className="nav-logo__mobile">
@@ -36,12 +32,6 @@ const Navigation = () => {
                     <div className="line2"></div>
                     <div className="line3"></div>
                 </button>
-                {/* <div className='nav-socials'>
-                        <Link href="/"><a className={clientWindowHeight > 50 ? ' color-black' : ''} target="_blank" rel="noreferrer"><BsFacebook title="Visit Facebook" /></a></Link>
-                        <Link href="/"><a className={clientWindowHeight > 50 ? ' color-black' : ''} target="_blank" rel="noreferrer"><BsInstagram title="Visit Instagram" /></a></Link>
-                        <Link href="/"><a className={clientWindowHeight > 50 ? ' color-black' : ''} target="_blank" rel="noreferrer"><BsTwitter title="Visit YouTube" /></a></Link>
-                    </div> */}
-
 
                 <ul className={toggleMobileMenu ? 'nav-list active-links' : 'nav-list'} id="navigationLinks">
                     {

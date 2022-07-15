@@ -16,7 +16,9 @@ footer {
     padding-top: 20px;
     display: flex;
     flex-direction: column;
-    row-gap: 10px;
+    align-items: center;
+    row-gap: 16px;
+    text-align: center;
  }
 
 footer h2 {
@@ -58,7 +60,7 @@ footer h2 {
 .footer-content__newsletter button {
     margin-top: 10px;
     padding: 8px 10px;
-    width: auto;
+    width: 100%;
     letter-spacing: 0.5px;
     border: 2px solid #fff;
     color: #fff;
@@ -109,6 +111,24 @@ footer h2 {
     font-size: 0.9rem;
 }
 
+.business-address {
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+
+.footer__socials {
+    display: flex;
+    justify-content: center;
+    column-gap: 14px;
+    font-size: 1.4rem;
+    /* margin-top: 20px; */
+}
+
+.footer__socials svg {
+    cursor: pointer;
+}
+
 .copyright {
     font-size: 0.8rem;
     text-align: center;
@@ -141,9 +161,7 @@ footer h2 {
         align-items: center;
      }
 
-    .business-address {
-        font-size: 1.2rem;
-    }
+
 }
 
 @media screen and (min-width: 1025px) {
@@ -162,6 +180,8 @@ footer h2 {
         justify-content: space-around;
         row-gap: 20px;
     }
+
+
 
     .footer-content__business-location-info {
         margin-top: 0;
@@ -230,5 +250,13 @@ footer h2 {
 
     .footer-content__newsletter button {
         width: 100%;
+    }
+
+    .footer__socials {
+        display: flex;
+        justify-content: center;
+        column-gap: 14px;
+        font-size: 1.4rem;
+        margin-top: 0px;
     }
 }

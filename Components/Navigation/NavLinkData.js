@@ -9,6 +9,7 @@ export const NavLinkData = [
         title: 'About',
         url: '/about'
     },
+
     {
         id: 3,
         title: 'Services',
@@ -16,13 +17,18 @@ export const NavLinkData = [
     },
     {
         id: 4,
+        title: 'Meet and Greet',
+        url: '/#meetAndGreet'
+    },
+    {
+        id: 5,
         title: 'Pet Profile',
         url: '/pet-profile'
     },
     {
-        id: 5,
+        id: 6,
         title: 'Contact',
-        url: '/#contact'
+        url: '/contact'
     },
     {
         id: 7,

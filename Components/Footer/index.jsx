@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import Image from 'next/image'
 import { toast, ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
+import { BsFacebook, BsInstagram, BsTwitter } from 'react-icons/bs';
+
 
 const Footer = () => {
     const [email, setEmail] = useState("")
@@ -53,16 +55,23 @@ const Footer = () => {
                             </fieldset>
                             <button type="submit" value={email} onClick={(e) => handleSignup(e)}>Sign Up!</button>
                         </form>
-                        <div className='business__info'>
 
+                        <div className='business__info'>
                             <p className='business-address'>
-                                123 Tampa Bay Ave.
+                                123 Tampa Bay Ave. <br />
                                 Tampa, FL 77777
                             </p>
                             <p className='business-phone'>
                                 (123)-456-7890
                             </p>
+                            <div className='footer__socials'>
+                                <BsFacebook />
+                                <BsInstagram />
+                                <BsTwitter />
+                            </div>
                         </div>
+
+
                     </div>
 
 
