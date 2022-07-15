@@ -1,43 +1,46 @@
-  .meet-and-greet__section {
+.register__wrapper {
+    margin-top: 100px;
     padding: 40px 20px;
   }
 
-  .meet-and-greet__header {
+  .register__header {
     font-size: clamp(1.4rem, 6vw, 4rem);
     text-align: center;
   }
 
-  .meet-and-greet__form {
+  .register__form {
     padding-top: 40px;
     max-width: 600px;
     margin: 0px auto;
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    display: flex;
+    flex-direction: column;
     gap: 20px;
   }
 
-  .meet-and-greet__form fieldset {
+  .register__form fieldset {
     display: flex;
     flex-direction: column;
     border: none;
   }
 
-  .meet-and-greet__label {
+  .register__label {
     font-size: 1.2rem;
   }
 
-  .meet-and-greet__input {
+  .register__input {
     border: none;
     box-shadow: 2px 2px 10px -4px rgb(217, 217, 217);
     padding: 10px;
     border-radius: 10px;
+    background-color: transparent;
   }
 
-  .meet-and-greet__submit {
-    padding: 8px;
+  .register__submit {
+    padding: 10px;
     border-radius: 12px;
-    border: 2px solid #001B26;
+    border: none;
     background-color: transparent;
+    box-shadow: 2px 2px 10px -4px rgb(217, 217, 217);
     grid-column: span 2;
     cursor: pointer;
     width: 150px;
@@ -49,7 +52,7 @@
   }
  
   @media screen and (min-width: 769px) {
-    .meet-and-greet__submit {
+    .register__submit {
       width: 250px;
       font-size: 1.2rem;
     }

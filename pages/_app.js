@@ -1,6 +1,10 @@
 import '../styles/globals.css'
 import Head from 'next/head'
 
+// Login/Register Page
+import '../Components/Login/login.modules.css'
+import '../Components/Register/register.modules.css'
+
 import '../Components/Navigation/navigation.modules.css';
 import '../Components/Hero/hero.modules.css';
 import '../Components/MeetandGreet/meet-and-greet.modules.css';
