@@ -16,7 +16,17 @@ export const NavLinkData = [
     },
     {
         id: 4,
+        title: 'Pet Profile',
+        url: '/pet-profile'
+    },
+    {
+        id: 5,
         title: 'Contact',
-        url: '/contact'
+        url: '/#contact'
+    },
+    {
+        id: 7,
+        title: 'Login',
+        url: '/login'
     },
 ]

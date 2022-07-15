@@ -10,6 +10,9 @@ import '../Components/Review/review.modules.css';
 import '../Components/About/about.modules.css';
 import '../Components/Team/team.modules.css';
 import '../Components/Footer/footer.modules.css';
+
+// Pet Profile Page
+import '../Components/PetProfile/pet-profile.modules.css'
 import Navigation from '../Components/Navigation';
 import Footer from '../Components/Footer';
 
