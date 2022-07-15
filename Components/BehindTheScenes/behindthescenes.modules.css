@@ -20,6 +20,7 @@
     font-size: clamp(2.2rem, 8vw, 4rem);
     font-weight: 400;
     color: #213841;
+    text-align: center;
 }
 
 .behind-the-scenes__headers h3 {
@@ -72,6 +73,7 @@
     line-height: 1.8;
     letter-spacing: 0.8px;
     font-size: 0.9rem;
+    text-align: center;
 }
 
 @media screen and (min-width: 479px) {
@@ -121,7 +123,7 @@
     .behind-the-scenes__container {
         flex-direction: row;
         justify-content: space-between;
-        padding: 20px;
+        padding: 20px 40px;
         max-width: 1100px;
     }
 
@@ -135,6 +137,7 @@
 
     .behind-the-scenes__container p {
         font-size: 1rem;
+        text-align: left;
        
     }
 }
