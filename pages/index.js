@@ -4,7 +4,7 @@ import { MdLocationPin } from 'react-icons/md'
 import BehindTheScenes from '../Components/BehindTheScenes';
 import Gallery from '../Components/Gallery';
 import HeroSection from '../Components/Hero';
-// import HeroSection from '../Components/Hero-2';
+import MeetandGreetForm from '../Components/MeetandGreet';
 import Review from '../Components/Review';
 
 export default function Home() {
@@ -20,6 +20,7 @@ the Bubbly Pug`} cta="Book a Meet and Greet!" />
         <BehindTheScenes />
         <Review content="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur, quod!" />
         <Gallery />
+        <MeetandGreetForm />
       </main>
     </>
   )

@@ -12,7 +12,7 @@ export const NavLinkData = [
     {
         id: 3,
         title: 'Services',
-        url: '/servives'
+        url: '/services'
     },
     {
         id: 4,

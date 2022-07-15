@@ -59,7 +59,7 @@
     align-items: center;
     column-gap: 20px;
     letter-spacing: 1.2px;
-    padding: 10px;
+    padding: 12px;
     border-radius: 30px;
 }
 
@@ -102,8 +102,7 @@
         font-family: 500;
         color: #fff;
         letter-spacing: 1.2px;
-        /* padding: 16px 16px; */
-        max-width: 600px;
+        width: 400px;
         transition: border 0.5s ease;
         font-size: 1.4rem;
     }
