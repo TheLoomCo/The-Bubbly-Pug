@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { NavLinkData } from './NavLinkData';
 import Image from 'next/image'
 import { AiFillCloseCircle } from 'react-icons/ai'
 
@@ -11,6 +10,16 @@ const Navigation = () => {
 
     const [toggleMobileMenu, setToggleMobileMenu] = useState(false);
     const [toggleAccountDropdown, setToggleAccountDropdown] = useState(false);
+
+    useEffect(() => {
+        document.querySelectorAll('li a').forEach((link) => {
+            link.addEventListener('click', () => {
+                setToggleMobileMenu(false)
+            });
+        });
+
+        return
+    }, [])
 
     return (
         <div className='navbar-style__wrapper'>
@@ -36,30 +45,26 @@ const Navigation = () => {
                 </button>
 
                 <ul className={toggleMobileMenu ? 'nav-list active-links' : 'nav-list'} id="navigationLinks">
-                    {/* {
-                        NavLinkData.map((link) => (
-                            <li key={link?.id} >
-                                <Link href={link?.url}>
-                                    <a onClick={() => setToggleMobileMenu(false)} className={`${router.pathname === link?.url ? 'active' : ''}`}>
-                                        {link?.title}
-                                    </a>
-                                </Link>
-                            </li>
-                        ))
-                    } */}
-                    <li><Link href="/"><a onClick={() => setToggleMobileMenu(false)} className={`${router.pathname === "/" ? 'active' : ''}`}>Home</a></Link></li>
-                    <li><Link href="/about"><a onClick={() => setToggleMobileMenu(false)} className={`${router.pathname === "/about" ? 'active' : ''}`}>About</a></Link></li>
-                    <li><Link href="/services"><a onClick={() => setToggleMobileMenu(false)} className={`${router.pathname === "/services" ? 'active' : ''}`}>Services</a></Link></li>
-                    <li><Link href="/#meetAndGreet"><a onClick={() => setToggleMobileMenu(false)} className={`${router.pathname === "/#meetAndGreet" ? 'active' : ''}`}>Meet and Greet</a></Link></li>
+                    <li><Link href="/"><a className={`${router.pathname === "/" ? 'active' : ''}`}>Home</a></Link></li>
+
+                    <li><Link href="/about"><a className={`${router.pathname === "/about" ? 'active' : ''}`}>About</a></Link></li>
+
+                    <li><Link href="/services"><a className={`${router.pathname === "/services" ? 'active' : ''}`}>Services</a></Link></li>
+
+                    <li><Link href="/#meetAndGreet"><a className={`${router.pathname === "/#meetAndGreet" ? 'active' : ''}`}>Meet and Greet</a></Link></li>
+
                     <li className='account__dropdown' onClick={() => setToggleAccountDropdown((prev) => !prev)}>Account
                         <ul className={toggleAccountDropdown ? 'account-menu__dropdown show-account-menu' : 'account-menu__dropdown'}>
                             <AiFillCloseCircle className='account-dropdown__close-icon' />
-                            <li><Link href="/account"><a onClick={() => setToggleMobileMenu(false)} >Account</a></Link></li>
-                            <li><Link href="/pet-profile"><a onClick={() => setToggleMobileMenu(false)} >Pet Profile</a></Link></li>
+                            <li><Link href="/account"><a >Account</a></Link></li>
+
+                            <li><Link href="/account/pet-profile"><a >Pet Profile</a></Link></li>
                         </ul>
                     </li>
-                    <li><Link href="/contact"><a onClick={() => setToggleMobileMenu(false)} className={`${router.pathname === "/contact" ? 'active' : ''}`}>Contact</a></Link></li>
-                    <li><Link href="/login"><a onClick={() => setToggleMobileMenu(false)} className={`${router.pathname === "/login" ? 'active' : ''}`}>Login</a></Link></li>
+
+                    <li><Link href="/contact"><a className={`${router.pathname === "/contact" ? 'active' : ''}`}>Contact</a></Link></li>
+
+                    <li><Link href="/login"><a className={`${router.pathname === "/login" ? 'active' : ''}`}>Login</a></Link></li>
                 </ul>
             </nav>
         </div>

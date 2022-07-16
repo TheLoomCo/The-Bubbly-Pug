@@ -15,6 +15,14 @@ import '../Components/About/about.modules.css';
 import '../Components/Team/team.modules.css';
 import '../Components/Footer/footer.modules.css';
 
+// Account Pages Styling
+import '../Components/AccountSidebar/account-sidebar.modules.css';
+import '../Components/account-layout.modules.css';
+import '../Components/Account/account-home.modules.css';
+import '../Components/Account/PetProfile/pet-profile.modules.css';
+import '../Components/Account/HumanProfile/human-profile.modules.css';
+import '../Components/Account/Appointments/appointments.modules.css'
+
 // Pet Profile Page
 import '../Components/PetProfile/pet-profile.modules.css'
 import Navigation from '../Components/Navigation';

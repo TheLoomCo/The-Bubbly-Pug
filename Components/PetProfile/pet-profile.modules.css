@@ -1,6 +1,7 @@
 .pet-profile__section {
-    margin-top: 100px;
+    margin: 100px 0px 80px;
     padding: 40px 20px;
+    flex: 1;
 }
 
 .pet-profile__header {
