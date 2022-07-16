@@ -48,21 +48,13 @@
     font-family: 'Delius';
 }
 
-/* .nav-communication__container {
-    display: flex;
-    justify-content: space-between;
-    color: #fff;
-    width: 100%;
-    padding: 20px 20px;
-} */
-
-
 .nav-logo__desktop {
     display: none;
 }
 
 .nav-list {
     display: none;
+    color: #fff;
 }
 
 .nav-list.active-links {
@@ -88,6 +80,35 @@
 .nav-list li a {
     color: #fff;
     position: relative;
+}
+
+.account__dropdown {
+    cursor: pointer;
+    position: relative;
+}
+
+.account-menu__dropdown {
+    display: none;
+}
+
+.account-dropdown__close-icon {
+	position: absolute;
+	top: 10px;
+	left: 300px;
+	color: #fff;
+	font-size: 2rem;
+}
+
+.account-menu__dropdown.show-account-menu {
+    padding: 20px;
+    width: 100vw;
+    position: absolute;
+    top: 40px;
+    left: -20px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    background-color: #001B26;
 }
 
 @media screen and (min-width: 1025px) {
@@ -162,7 +183,7 @@
         width: 50px;
     }
 
-    /* .nav-list li a.active::before {
+    .nav-list li a.active::before {
         content: '';
         position: absolute;
         bottom: -7px;
@@ -171,11 +192,11 @@
         background-color: #fff;
         height: 2px;
         transition: width 0.5s ease;
-    } */
+    } 
 
 
-    /* .nav-list li a.active:hover::before {
+    .nav-list li a.active:hover::before {
         width: 50%;
-    } */
+    }
 
 }
