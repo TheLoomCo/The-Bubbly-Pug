@@ -47,19 +47,19 @@ const Navigation = () => {
                             </li>
                         ))
                     } */}
-                    <li><Link href="/"><a className={`${router.pathname === "/" ? 'active' : ''}`}>Home</a></Link></li>
-                    <li><Link href="/about"><a className={`${router.pathname === "/about" ? 'active' : ''}`}>About</a></Link></li>
-                    <li><Link href="/services"><a className={`${router.pathname === "/services" ? 'active' : ''}`}>Services</a></Link></li>
-                    <li><Link href="/#meetAndGreet"><a className={`${router.pathname === "/#meetAndGreet" ? 'active' : ''}`}>Meet and Greet</a></Link></li>
+                    <li><Link href="/"><a onClick={() => setToggleMobileMenu(false)} className={`${router.pathname === "/" ? 'active' : ''}`}>Home</a></Link></li>
+                    <li><Link href="/about"><a onClick={() => setToggleMobileMenu(false)} className={`${router.pathname === "/about" ? 'active' : ''}`}>About</a></Link></li>
+                    <li><Link href="/services"><a onClick={() => setToggleMobileMenu(false)} className={`${router.pathname === "/services" ? 'active' : ''}`}>Services</a></Link></li>
+                    <li><Link href="/#meetAndGreet"><a onClick={() => setToggleMobileMenu(false)} className={`${router.pathname === "/#meetAndGreet" ? 'active' : ''}`}>Meet and Greet</a></Link></li>
                     <li className='account__dropdown' onClick={() => setToggleAccountDropdown((prev) => !prev)}>Account
                         <ul className={toggleAccountDropdown ? 'account-menu__dropdown show-account-menu' : 'account-menu__dropdown'}>
                             <AiFillCloseCircle className='account-dropdown__close-icon' />
-                            <li><Link href="/account"><a >Account</a></Link></li>
-                            <li><Link href="/pet-profile"><a >Pet Profile</a></Link></li>
+                            <li><Link href="/account"><a onClick={() => setToggleMobileMenu(false)} >Account</a></Link></li>
+                            <li><Link href="/pet-profile"><a onClick={() => setToggleMobileMenu(false)} >Pet Profile</a></Link></li>
                         </ul>
                     </li>
-                    <li><Link href="/contact"><a className={`${router.pathname === "/contact" ? 'active' : ''}`}>Contact</a></Link></li>
-                    <li><Link href="/login"><a className={`${router.pathname === "/login" ? 'active' : ''}`}>Login</a></Link></li>
+                    <li><Link href="/contact"><a onClick={() => setToggleMobileMenu(false)} className={`${router.pathname === "/contact" ? 'active' : ''}`}>Contact</a></Link></li>
+                    <li><Link href="/login"><a onClick={() => setToggleMobileMenu(false)} className={`${router.pathname === "/login" ? 'active' : ''}`}>Login</a></Link></li>
                 </ul>
             </nav>
         </div>
