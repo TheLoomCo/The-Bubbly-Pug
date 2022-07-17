@@ -18,18 +18,18 @@ const Account = () => {
 
 export default Account
 
-export const getServerSideProps = async (context) => {
-    const session = await getSession(context);
-    if (!session) {
-        return {
-            redirect: {
-                destination: '/'
-            }
-        }
-    }
-    return {
-        props: {
-            session
-        }
-    }
-}
+// export const getServerSideProps = async (context) => {
+//     const session = await getSession(context);
+//     if (!session) {
+//         return {
+//             redirect: {
+//                 destination: '/'
+//             }
+//         }
+//     }
+//     return {
+//         props: {
+//             session
+//         }
+//     }
+// }
