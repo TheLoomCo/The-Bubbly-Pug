@@ -13,9 +13,9 @@ const HeroSection = ({ title, cta }) => {
             <Navigation />
             <div className="hero-cta">
                 <h1><pre>{title}</pre></h1>
-                <Link href="#meetAndGreet">
+                {cta && <Link href="#meetAndGreet">
                     <a><FaPaw />{cta}<FaPaw /></a>
-                </Link>
+                </Link>}
             </div>
         </section>
     )

@@ -4,7 +4,7 @@ import { FaPaw } from 'react-icons/fa'
 const PetProfileForm = () => {
     return (
         <div className="pet-profile__section">
-            <h1 className='pet-profile__header'>Pet P<span><FaPaw /></span>file</h1>
+            <h1 className='pet-profile__header'>Pet <span><FaPaw /></span>file</h1>
             <form className='pet-profile__form'>
 
                 {/* Medications, neutered / spayed (checkbox), delete profile button  */}

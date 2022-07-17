@@ -9,12 +9,8 @@ import '../Components/Register/register.modules.css'
 import '../Components/Navigation/navigation.modules.css';
 import '../Components/Hero/hero.modules.css';
 import '../Components/MeetandGreet/meet-and-greet.modules.css';
-import '../Components/BehindTheScenes/behindthescenes.modules.css';
-import '../Components/Gallery/gallery.modules.css';
 import '../Components/Review/review.modules.css';
-import '../Components/About/about.modules.css';
 import '../Components/Team/team.modules.css';
-import '../Components/Footer/footer.modules.css';
 
 // Account Pages Styling
 import '../Components/AccountSidebar/account-sidebar.modules.css';

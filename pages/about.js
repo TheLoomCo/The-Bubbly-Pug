@@ -1,8 +1,14 @@
 import React from 'react'
+import AboutComp from '../Components/About'
+import HeroSection from '../Components/Hero'
 
 const About = () => {
     return (
-        <div>About</div>
+        <>
+            <HeroSection title={`About the 
+Bubbly Pug`} />
+            <AboutComp />
+        </>
     )
 }
 

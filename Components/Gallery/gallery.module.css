@@ -1,11 +1,11 @@
-.gallery-styling__wrapper {
+.wrapper {
     padding: 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.gallery__heading {
+.wrapper h2 {
     font-size: clamp(1.4rem, 8vw, 4rem);
 }
 

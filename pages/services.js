@@ -1,8 +1,11 @@
 import React from 'react'
+import HeroSection from '../Components/Hero'
 
 const Services = () => {
     return (
-        <div>Services</div>
+        <>
+            <HeroSection title="Bubbly Services" />
+        </>
     )
 }
 

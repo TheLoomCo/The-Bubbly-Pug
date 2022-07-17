@@ -25,8 +25,8 @@ const Navigation = () => {
 
     const handleAuth = () => {
         if (session) {
-            signOut();
             router.push('/')
+            signOut();
         } else {
             signIn();
         }
