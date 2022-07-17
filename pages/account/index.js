@@ -1,17 +1,27 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import AccountHome from '../../Components/Account'
 import AccountLayout from '../../Components/accountLayout'
 import { getSession, useSession } from 'next-auth/react'
+import { useRouter } from 'next/router'
 
 const Account = () => {
-    const { data: session } = useSession();
-    console.log(session);
+    const router = useRouter();
+    const { data: session } = useSession({ required: true });
 
+    useEffect(() => {
+        if (!session) {
+            router.push('/');
+        }
+    }, [])
     return (
         <>
-            <AccountLayout>
-                {session && <AccountHome />}
-            </AccountLayout>
+            {
+                session && (
+                    <AccountLayout>
+                        <AccountHome />
+                    </AccountLayout>
+                )
+            }
         </>
     )
 }
