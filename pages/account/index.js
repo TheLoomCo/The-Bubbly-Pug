@@ -1,13 +1,16 @@
 import React from 'react'
 import AccountHome from '../../Components/Account'
 import AccountLayout from '../../Components/accountLayout'
-import { getSession } from 'next-auth/react'
+import { getSession, useSession } from 'next-auth/react'
 
 const Account = () => {
+    const { data: session } = useSession();
+    console.log(session);
+
     return (
         <>
             <AccountLayout>
-                <AccountHome />
+                {session && <AccountHome />}
             </AccountLayout>
         </>
     )
