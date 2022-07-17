@@ -36,10 +36,6 @@
     background-color: transparent;
   }
 
-  input:-internal-autofill-selected {
-    background-color: blue !important;
-  }
-
   .login__submit {
     padding: 10px;
     border-radius: 12px;
@@ -54,6 +50,7 @@
     align-items: center;
     column-gap: 10px;
     margin: 0px auto;
+    font-family: 'Delius';
   }
  
   @media screen and (min-width: 769px) {

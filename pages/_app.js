@@ -1,5 +1,6 @@
 import '../styles/globals.css'
 import Head from 'next/head'
+import { SessionProvider } from 'next-auth/react';
 
 // Login/Register Page
 import '../Components/Login/login.modules.css'
@@ -28,7 +29,7 @@ import '../Components/PetProfile/pet-profile.modules.css'
 import Navigation from '../Components/Navigation';
 import Footer from '../Components/Footer';
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps: { session, ...pageProps } }) {
   return (
     <>
       <Head>
@@ -48,9 +49,11 @@ function MyApp({ Component, pageProps }) {
         <meta property="og:type" content="business.business" />
         <meta property="og:image" content="https://res.cloudinary.com/aladd93/image/upload/v1657785827/bubbly-pug-icon_rwx7l5.png" />
       </Head>
-      <Navigation />
-      <Component {...pageProps} />
-      <Footer />
+      <SessionProvider session={session}>
+        <Navigation />
+        <Component {...pageProps} />
+        <Footer />
+      </SessionProvider>
     </>
   )
 }

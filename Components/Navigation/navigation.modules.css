@@ -118,8 +118,32 @@
     border-radius: 10px;
 }
 
+.auth__btn {
+    background-color: rgb(250, 188, 180, 90%);
+    padding: 10px;
+    width: 120px;
+    border: none;
+    border-radius: 20px;
+    font-family: 'Delius';
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    background: linear-gradient(to right, rgb(250, 188, 180, 90%), #fff);
+    background-color: rgb(250, 188, 180, 90%);
+    background-repeat: no-repeat;
+    transition: background-size 0.3s ease;
+}
+
 
 @media screen and (min-width: 1025px) {
+
+    .auth__btn {
+        background-size: 5%;
+    }
+.auth__btn:hover {
+    background-size: 100%;
+}
+
 
     #mobileMenuTrigger {
         display: none;

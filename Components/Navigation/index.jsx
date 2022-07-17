@@ -3,10 +3,12 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import Image from 'next/image'
 import { AiFillCloseCircle } from 'react-icons/ai'
+import { useSession, signOut, signIn } from 'next-auth/react';
 
 
 const Navigation = () => {
     const router = useRouter();
+    const { data: session } = useSession();
 
     const [toggleMobileMenu, setToggleMobileMenu] = useState(false);
     const [toggleAccountDropdown, setToggleAccountDropdown] = useState(false);
@@ -20,6 +22,15 @@ const Navigation = () => {
 
         return
     }, [])
+
+    const handleAuth = () => {
+        if (session) {
+            signOut();
+            router.push('/')
+        } else {
+            signIn();
+        }
+    }
 
     return (
         <div className='navbar-style__wrapper'>
@@ -52,19 +63,14 @@ const Navigation = () => {
                     <li><Link href="/services"><a className={`${router.pathname === "/services" ? 'active' : ''}`}>Services</a></Link></li>
 
                     <li><Link href="/#meetAndGreet"><a className={`${router.pathname === "/#meetAndGreet" ? 'active' : ''}`}>Meet and Greet</a></Link></li>
-
-                    <li className='account__dropdown' onClick={() => setToggleAccountDropdown((prev) => !prev)}>Account
-                        <ul className={toggleAccountDropdown ? 'account-menu__dropdown show-account-menu' : 'account-menu__dropdown'}>
-                            <AiFillCloseCircle className='account-dropdown__close-icon' />
-                            <li><Link href="/account"><a >Account</a></Link></li>
-
-                            <li><Link href="/account/pet-profile"><a >Pet Profile</a></Link></li>
-                        </ul>
-                    </li>
-
+                    {
+                        session && (
+                            <li><Link href="/account"><a className={`${router.pathname === "/account" ? 'active' : ''}`}>Account</a></Link></li>
+                        )
+                    }
                     <li><Link href="/contact"><a className={`${router.pathname === "/contact" ? 'active' : ''}`}>Contact</a></Link></li>
 
-                    <li><Link href="/login"><a className={`${router.pathname === "/login" ? 'active' : ''}`}>Login</a></Link></li>
+                    <button className='auth__btn' type="button" onClick={handleAuth}>{session ? 'Sign Out' : 'Sign In'}</button>
                 </ul>
             </nav>
         </div>

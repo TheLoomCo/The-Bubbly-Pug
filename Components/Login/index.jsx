@@ -1,7 +1,14 @@
-import Link from 'next/link'
 import React, { useState } from 'react'
-
+import { useSession, signIn } from 'next-auth/react';
+import { useRouter } from 'next/router';
 const LoginForm = () => {
+    const router = useRouter();
+    const { data: session } = useSession();
+
+    const handleSignIn = () => {
+        signIn();
+        router.push('/')
+    }
     return (
         <div className="login__wrapper">
             <h1 className='login__header'>Login</h1>
@@ -16,7 +23,7 @@ const LoginForm = () => {
                     <input id="password" className='login__input' type="password" />
                 </fieldset>
 
-                <button className='login__submit' type="submit">Login</button>
+                <button className='login__submit' type="submit" onClick={handleSignIn}>Login</button>
                 {/* Need an Account? Register Here! */}
 
             </form>
