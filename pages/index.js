@@ -4,6 +4,7 @@ import { MdLocationPin } from 'react-icons/md'
 import BehindTheScenes from '../Components/BehindTheScenes';
 import Gallery from '../Components/Gallery';
 import HeroSection from '../Components/Hero';
+import Layout from '../Components/Layout';
 import MeetandGreetForm from '../Components/MeetandGreet';
 import Review from '../Components/Review';
 

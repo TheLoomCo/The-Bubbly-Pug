@@ -1,6 +1,6 @@
 import React from 'react'
 import AppointmentsComp from '../../Components/Account/Appointments'
-import AccountLayout from '../../Components/accountLayout'
+import AccountLayout from '../../Components/AccountLayout'
 import { getSession } from 'next-auth/react'
 
 const Appointments = () => {

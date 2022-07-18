@@ -1,8 +1,9 @@
 import React from 'react'
+import styles from './account-home.module.css'
 
 const AccountHome = () => {
     return (
-        <main className='account-home__wrapper'>
+        <main className={styles.account_home__wrapper}>
             Account Home
         </main>
     )

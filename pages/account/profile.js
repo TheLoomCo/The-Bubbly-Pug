@@ -1,6 +1,6 @@
 import React from 'react'
 import HumanProfileComp from '../../Components/Account/HumanProfile'
-import AccountLayout from '../../Components/accountLayout'
+import AccountLayout from '../../Components/AccountLayout'
 import { getSession } from 'next-auth/react'
 
 const HumanProfile = () => {

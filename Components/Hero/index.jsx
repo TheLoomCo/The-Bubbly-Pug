@@ -10,7 +10,7 @@ const HeroSection = ({ title, cta }) => {
             <div className="parallax"></div>
             <img className='mobile-img' src="/images/hero-img-square.png" alt="Ember Grill" />
             <div className="overlay"></div>
-            <Navigation />
+            {/* <Navigation /> */}
             <div className="hero-cta">
                 <h1><pre>{title}</pre></h1>
                 {cta && <Link href="#meetAndGreet">
