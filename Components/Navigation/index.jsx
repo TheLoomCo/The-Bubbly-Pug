@@ -25,7 +25,7 @@ const Navigation = () => {
 
     const handleAuth = () => {
         if (session) {
-            router.push('/')
+            router.push('/account/dashboard')
             signOut();
         } else {
             signIn();
