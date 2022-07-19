@@ -24,17 +24,16 @@ const Navigation = () => {
     }, [])
 
     const handleAuth = () => {
-        if (session) {
-            router.push('/account/dashboard')
-            signOut({
-                callbackUrl: 'http://localhost:3000/' || 'https://www.bubbly-pug.vercel.app/'
-            });
-        } else {
 
-            signIn('google', {
-                callbackUrl: 'http://localhost:3000/account/dashboard' || 'https://www.bubbly-pug.vercel.app/account/dashboard'
-            });
-        }
+        signOut({
+            callbackUrl: 'http://localhost:3000/' || 'https://bubbly-pug.vercel.app/'
+        });
+
+
+        signIn('google', {
+            callbackUrl: 'http://localhost:3000/account/dashboard' || 'https://bubbly-pug.vercel.app/account/dashboard'
+        });
+
     }
 
     return (
@@ -70,7 +69,7 @@ const Navigation = () => {
                     <li><Link href="/#meetAndGreet"><a className={`${router.pathname === "/#meetAndGreet" ? 'active' : ''}`}>Meet and Greet</a></Link></li>
                     {
                         session && (
-                            <li><Link href="/account"><a className={`${router.pathname === "/account" ? 'active' : ''}`}>Account</a></Link></li>
+                            <li><Link href="/account/dashboard"><a className={`${router.pathname === "/account" ? 'active' : ''}`}>Account</a></Link></li>
                         )
                     }
                     <li><Link href="/contact"><a className={`${router.pathname === "/contact" ? 'active' : ''}`}>Contact</a></Link></li>
