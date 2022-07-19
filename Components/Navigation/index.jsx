@@ -8,7 +8,7 @@ import { useSession, signOut, signIn } from 'next-auth/react';
 
 const Navigation = () => {
     const router = useRouter();
-    const { data: session } = useSession();
+    const { data: session, status } = useSession();
 
     const [toggleMobileMenu, setToggleMobileMenu] = useState(false);
     const [toggleAccountDropdown, setToggleAccountDropdown] = useState(false);
@@ -23,18 +23,7 @@ const Navigation = () => {
         return
     }, [])
 
-    const handleAuth = () => {
 
-        signOut({
-            callbackUrl: 'http://localhost:3000/' || 'https://www.the-bubbly-pug.vercel.app/'
-        });
-
-
-        signIn('google', {
-            callbackUrl: 'http://localhost:3000/account/dashboard' || 'https://www.the-bubbly-pug.vercel.app/account/dashboard'
-        });
-
-    }
 
     return (
         <div className='navbar-style__wrapper'>
@@ -74,7 +63,27 @@ const Navigation = () => {
                     }
                     <li><Link href="/contact"><a className={`${router.pathname === "/contact" ? 'active' : ''}`}>Contact</a></Link></li>
 
-                    <button className='auth__btn' type="button" onClick={handleAuth}>{session ? 'Sign Out' : 'Sign In'}</button>
+                    {status === 'unauthenticated' && (
+                        <button className='auth__btn' type="button"
+                            onClick={() => signIn('google', {
+                                callbackUrl: 'http://localhost:3000/account/dashboard' || 'https://the-bubbly-pug.vercel.app/account/dashboard'
+                            })}>
+                            SignIn</button>
+                    )}
+
+                    {
+                        status === 'authenticated' && (
+                            <button className='auth__btn' type="button"
+                                onClick={() => signOut({
+                                    callbackUrl: 'http://localhost:3000/' || 'https://the-bubbly-pug.vercel.app/'
+                                })}>
+                                Signout</button>
+                        )
+                    }
+
+
+
+
                 </ul>
             </nav>
         </div>
