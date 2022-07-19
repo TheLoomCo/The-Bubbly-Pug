@@ -9,22 +9,15 @@ const Account = () => {
     const { data: session, status } = useSession();
     // const loading = status === "loading";
 
-    useEffect(() => {
-        if (!session) {
-            router.push('/')
-        }
-    }, [session])
-
-
 
     // When rendering client side don't display anything until loading is complete
     // if (typeof window !== "undefined" && loading) return null
+
 
     // If session exists, display content
     if (session) {
         return (
             <>
-
                 <AccountLayout>
                     <AccountHome />
                 </AccountLayout>
@@ -40,6 +33,7 @@ export default Account
 
 // export const getServerSideProps = async (context) => {
 //     const session = await getSession(context);
+//     console.log(session);
 //     if (!session) {
 //         return {
 //             redirect: {

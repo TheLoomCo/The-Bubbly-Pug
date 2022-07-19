@@ -11,19 +11,14 @@ const AccountLayout = ({ children }) => {
   const loading = status === "loading";
 
   // if (typeof window !== "undefined" && loading) return null
-
-  if (session) {
-
-    return (
-      <>
-        <div className={styles.account_layout__wrapper}>
-          <AccountSidebar />
-          {children}
-        </div>
-      </>
-    )
-  }
-
+  return (
+    <>
+      <div className={styles.account_layout__wrapper}>
+        <AccountSidebar />
+        {children}
+      </div>
+    </>
+  )
 }
 
 export default AccountLayout
