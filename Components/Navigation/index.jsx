@@ -30,7 +30,7 @@ const Navigation = () => {
 
     const handleSignout = () => {
         signOut({
-            callbackUrl: 'https://bubbly-pug.vercel.app/about'
+            callbackUrl: 'https://bubbly-pug.vercel.app/'
         })
     }
 
