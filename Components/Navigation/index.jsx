@@ -66,7 +66,7 @@ const Navigation = () => {
                     {status === 'unauthenticated' && (
                         <button className='auth__btn' type="button"
                             onClick={() => signIn('google', {
-                                callbackUrl: 'http://localhost:3000/account/dashboard' || 'https://the-bubbly-pug.vercel.app/account/dashboard'
+                                callbackUrl: 'http://localhost:3000/account/dashboard' || 'https://bubbly-pug.vercel.app/account/dashboard'
                             })}>
                             SignIn</button>
                     )}
@@ -75,7 +75,7 @@ const Navigation = () => {
                         status === 'authenticated' && (
                             <button className='auth__btn' type="button"
                                 onClick={() => signOut({
-                                    callbackUrl: 'http://localhost:3000/' || 'https://the-bubbly-pug.vercel.app/'
+                                    callbackUrl: 'http://localhost:3000/' || 'https://bubbly-pug.vercel.app/'
                                 })}>
                                 Signout</button>
                         )
