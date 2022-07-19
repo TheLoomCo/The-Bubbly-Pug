@@ -1,4 +1,3 @@
-import React, { useEffect } from 'react'
 import AccountHome from '../../Components/Account'
 import AccountLayout from '../../Components/AccountLayout'
 import { useRouter } from 'next/router'

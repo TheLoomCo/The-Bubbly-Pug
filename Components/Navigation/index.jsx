@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import Image from 'next/image'
-import { AiFillCloseCircle } from 'react-icons/ai'
 import { useSession, signOut, signIn } from 'next-auth/react';
 
 
@@ -23,7 +22,18 @@ const Navigation = () => {
         return
     }, [])
 
+    const handleSignin = () => {
+        signIn('google', {
+            callbackUrl: 'http://localhost:3000/account/dashboard'
+        })
+    }
 
+
+    const handleSignout = () => {
+        signOut({
+            callbackUrl: 'http://localhost:3000/' || 'https://bubbly-pug.vercel.app/'
+        })
+    }
 
     return (
         <div className='navbar-style__wrapper'>
@@ -65,18 +75,14 @@ const Navigation = () => {
 
                     {status === 'unauthenticated' && (
                         <button className='auth__btn' type="button"
-                            onClick={() => signIn('google', {
-                                callbackUrl: 'http://localhost:3000/account/dashboard' || 'https://bubbly-pug.vercel.app/account/dashboard'
-                            })}>
+                            onClick={handleSignin}>
                             SignIn</button>
                     )}
 
                     {
                         status === 'authenticated' && (
                             <button className='auth__btn' type="button"
-                                onClick={() => signOut({
-                                    callbackUrl: 'http://localhost:3000/' || 'https://bubbly-pug.vercel.app/'
-                                })}>
+                                onClick={handleSignout}>
                                 Signout</button>
                         )
                     }
