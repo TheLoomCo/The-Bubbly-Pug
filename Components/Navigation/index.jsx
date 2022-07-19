@@ -26,9 +26,14 @@ const Navigation = () => {
     const handleAuth = () => {
         if (session) {
             router.push('/account/dashboard')
-            signOut();
+            signOut({
+                callbackUrl: process.env.NEXT_PUBLIC_SIGNOUT_CALLBACK_DEV || process.env.NEXT_PUBLIC_CALLBACK_PROD
+            });
         } else {
-            signIn();
+
+            signIn('google', {
+                callbackUrl: process.env.NEXT_PUBLIC_SIGNIN_CALLBACK_DEV || process.env.NEXT_PUBLIC_SIGNIN_CALLBACK_PROD
+            });
         }
     }
 

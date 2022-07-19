@@ -22,6 +22,7 @@ import '../Components/Account/Appointments/appointments.modules.css'
 import '../Components/PetProfile/pet-profile.modules.css'
 import Navigation from '../Components/Navigation';
 import Footer from '../Components/Footer';
+import AuthWrapper from '../Components/AuthWrapper';
 
 function MyApp({ Component, pageProps: { session, ...pageProps } }) {
   return (
@@ -43,10 +44,13 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
         <meta property="og:type" content="business.business" />
         <meta property="og:image" content="https://res.cloudinary.com/aladd93/image/upload/v1657785827/bubbly-pug-icon_rwx7l5.png" />
       </Head>
+
       <SessionProvider session={session}>
-        <Navigation />
-        <Component {...pageProps} />
-        <Footer />
+        <AuthWrapper>
+          <Navigation />
+          <Component {...pageProps} />
+          <Footer />
+        </AuthWrapper>
       </SessionProvider>
     </>
   )

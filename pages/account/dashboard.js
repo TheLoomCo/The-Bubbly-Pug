@@ -5,13 +5,8 @@ import { useRouter } from 'next/router'
 import { getSession, useSession } from 'next-auth/react';
 
 const Account = () => {
-    const router = useRouter();
-    const { data: session, status } = useSession();
-    // const loading = status === "loading";
+    const { data: session } = useSession();
 
-
-    // When rendering client side don't display anything until loading is complete
-    // if (typeof window !== "undefined" && loading) return null
 
 
     // If session exists, display content

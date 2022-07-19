@@ -6,9 +6,8 @@ import { useRouter } from 'next/router';
 
 
 const PetProfile = () => {
-    const router = useRouter();
     const { data: session, status } = useSession();
-    const loading = status === "loading";
+
     if (session) {
         return (
             <>
