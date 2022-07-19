@@ -26,12 +26,12 @@ const Navigation = () => {
     const handleAuth = () => {
 
         signOut({
-            callbackUrl: 'http://localhost:3000/' || 'https://bubbly-pug.vercel.app/'
+            callbackUrl: 'http://localhost:3000/' || 'https://the-bubbly-pug.vercel.app/'
         });
 
 
         signIn('google', {
-            callbackUrl: 'http://localhost:3000/account/dashboard' || 'https://bubbly-pug.vercel.app/account/dashboard'
+            callbackUrl: 'http://localhost:3000/account/dashboard' || 'https://the-bubbly-pug.vercel.app/account/dashboard'
         });
 
     }
