@@ -24,10 +24,9 @@ const Navigation = () => {
 
     const handleSignin = () => {
         signIn('google', {
-            callbackUrl: 'http://localhost:3000/account/dashboard'
+            callbackUrl: 'http://localhost:3000/account/dashboard' || 'https://bubbly-pug.vercel.app/account/dashboard'
         })
     }
-
 
     const handleSignout = () => {
         signOut({
