@@ -27,12 +27,12 @@ const Navigation = () => {
         if (session) {
             router.push('/account/dashboard')
             signOut({
-                callbackUrl: process.env.NEXT_PUBLIC_SIGNOUT_CALLBACK_DEV || process.env.NEXT_PUBLIC_CALLBACK_PROD
+                callbackUrl: 'http://localhost:3000/' || 'https://www.bubbly-pug.vercel.app/'
             });
         } else {
 
             signIn('google', {
-                callbackUrl: process.env.NEXT_PUBLIC_SIGNIN_CALLBACK_DEV || process.env.NEXT_PUBLIC_SIGNIN_CALLBACK_PROD
+                callbackUrl: 'http://localhost:3000/account/dashboard' || 'https://www.bubbly-pug.vercel.app/account/dashboard'
             });
         }
     }
