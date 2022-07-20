@@ -1,4 +1,5 @@
-import AccountHome from '../../Components/Account'
+// import AccountHome from '../../Components/Account/AccountHome'
+import { AccountHome } from '../../Components/Account';
 import AccountLayout from '../../Components/AccountLayout'
 import { useRouter } from 'next/router'
 import { getSession, useSession } from 'next-auth/react';

@@ -1,21 +1,21 @@
-.pet-profile__section {
+.pet_profile__section {
     margin: 100px 0px 80px;
     padding: 40px 20px;
     flex: 1;
 }
 
-.pet-profile__header {
+.pet_profile__header {
     font-size: clamp(1.8rem, 6vw, 4rem);
     text-align: center;
 }
 
 /* Header SVG Styling */
-.pet-profile__header path {
+.pet_profile__header path {
     transform: translateY(30px);
 }
 
 /* Pet Profile Form */
-.pet-profile__form {
+.pet_profile__form {
   padding-top: 40px;
   max-width: 660px;
   margin: 0 auto;
@@ -26,7 +26,7 @@
 }
 
 @media screen and (min-width: 576px) {
-.pet-profile__form {
+.pet_profile__form {
   padding-top: 40px;
   max-width: 660px;
   margin: 0 auto;
@@ -37,7 +37,7 @@
 }
 
 /* General Fieldset Style */
-.pet-profile__form fieldset {
+.pet_profile__form fieldset {
     display: flex;
     flex-direction: column;
     row-gap: 10px;
@@ -46,12 +46,12 @@
 }
 
 /* General Label Style */
-.pet-profile__label {
+.pet_profile__label {
   font-size: 1.2rem;
 }
 
 /* General Input Style */
-.pet-profile__input {
+.pet_profile__input {
   border: none;
   box-shadow: 2px 2px 10px -4px rgb(217, 217, 217);
   padding: 8px 10px;
@@ -61,7 +61,7 @@
 }
 
 /* Pet Status Select Element */
-.pet-status__select {
+.pet_status__select {
   appearance: none;
   -moz-appearance: none;
   -webkit-appearance: none;
@@ -75,12 +75,12 @@
 }
 
 /* Additional Information Textarea */
-.additional-info {
+.additional_info {
     grid-row: 6;
     grid-column: span 2;
 }
 
-.pet-profile__submit {
+.pet_profile__submit {
     padding: 8px;
     border-radius: 12px;
     border: 2px solid rgba(0, 0, 0, 0.727);
@@ -96,14 +96,14 @@
 }
 
 @media screen and (min-width: 576px) {
-    .pet-profile__submit {
+    .pet_profile__submit {
         width: 250px;
         font-size: 1.2rem;
     }
 }
 
 /* Pet Profile Image Upload */
-.pet-profile__fieldset{
+.pet_profile__fieldset{
   max-width: 430px;
   width: 98%;
   position: relative;
@@ -111,7 +111,7 @@
   justify-self: center;
   margin-bottom: 60px;
 }
-.pet-profile__fieldset .pet-profile-image-upload__label{
+.pet_profile__fieldset .pet_profile_image_upload__label{
   position: relative;
   height: 300px;
   width: 100%;
@@ -124,7 +124,7 @@
   overflow: hidden;
 }
 
-.pet-profile-image-upload__label .text{
+.pet_profile_image_upload__label .text{
   font-size: 20px;
   font-weight: 500;
   color: #5B5B7B;

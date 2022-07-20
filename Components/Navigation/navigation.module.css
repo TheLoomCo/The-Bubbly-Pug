@@ -27,14 +27,17 @@
     transform: rotate(45deg) translate(-5.2px, -4px);
 }
 
-.navbar-style__wrapper {
-    width: 100%;
+.navbar_style__wrapper {
+    /* width: 100%; */
     position: fixed;
     top: 0;
     left: 0;
+    right: 0px;
     z-index: 100;
     background-color: #001B26;
     transition: background-color 0.2s ease;
+    max-width: 1800px;
+    margin: 0px auto;
     
 }
 
@@ -48,16 +51,16 @@
     font-family: 'Delius';
 }
 
-.nav-logo__desktop {
+.nav_logo__desktop {
     display: none;
 }
 
-.nav-list {
+.nav_list {
     display: none;
     color: #fff;
 }
 
-.nav-list.active-links {
+.nav_list.active_links {
     display: flex;
     flex-direction: column;
     top: 90px;
@@ -73,11 +76,11 @@
     position: absolute;
 }
 
-.nav-list.active-links li {
+.nav_list.active_links li {
     transform: translateY(-200%);
 }
 
-.nav-list li a {
+.nav_list li a {
     color: #fff;
     position: relative;
 }
@@ -149,7 +152,7 @@
         display: none;
     }
 
-    .navbar-style__wrapper {
+    .navbar_style__wrapper {
         padding: 20px 0;
         width: 100%;
         position: fixed;
@@ -177,15 +180,15 @@
         height: 110px;
     }
 
-    .nav-logo__mobile {
+    .nav_logo__mobile {
         display: none;
     }
 
-    .nav-logo__desktop {
+    .nav_logo__desktop {
         display: block;
     }
 
-    .nav-list {
+    .nav_list {
         display: flex;
         align-items: center;
         column-gap: 30px;
@@ -193,13 +196,13 @@
         font-size: 1.2rem;
     }
 
-    .nav-list li a {
+    .nav_list li a {
         position: relative;
     }
 
 
 
-    .nav-list li a::before {
+    .nav_list li a::before {
         display: inline;
         content: '';
         position: absolute;
@@ -211,11 +214,11 @@
         transition: width 0.5s ease;
     }
 
-    .nav-list li a:hover:before {
+    .nav_list li a:hover:before {
         width: 50px;
     }
 
-    .nav-list li a.active::before {
+    .nav_list li a.active::before {
         content: '';
         position: absolute;
         bottom: -7px;
@@ -227,7 +230,7 @@
     } 
 
 
-    .nav-list li a.active:hover::before {
+    .nav_list li a.active:hover::before {
         width: 50%;
     }
 

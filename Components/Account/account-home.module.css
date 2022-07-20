@@ -1,7 +1,61 @@
 .account_home__wrapper {
-    margin-top: 100px;
     padding: 40px;
     display: flex;
     justify-content: center;
-    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    flex: 5;
+    padding-bottom: 100px;
+    height: calc(100vh - 80px);
+}
+
+.account_home__profile_header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 30px;
+}
+
+.account_home__profile_info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    column-gap: 50px;
+}
+
+.account_history__table {
+    margin-top: 30px;
+    width: 500px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: center;
+    border: 1px solid #000;
+}
+.account_history__table h2 {
+    text-align: center;
+    grid-column: span 2;
+    margin-bottom: 20px;
+}
+
+.account_history__header {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.account_history__past_appointment {
+border: 1px solid #000;
+font-size: 1.1rem;
+text-align: center;
+padding: 8px;
+}
+
+.account_history__pet_name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 20px;
+    font-size: 1.1rem;
+    border: 1px solid #000;
+    padding: 8px;
 }

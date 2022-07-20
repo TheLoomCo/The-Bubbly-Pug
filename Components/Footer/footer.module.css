@@ -1,15 +1,26 @@
 .wrapper {
     background-color: #001B26;
     color: #fff;
+    max-width: 1800px;
+    margin: 0 auto;
 }
 
-.footer {
+.Footer {
     padding: 40px 10px 0px;
     max-width: 1800px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     row-gap: 50px;
+}
+
+.AccountFooter {
+    max-width: 1800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding: 40px 10px;
+    row-gap: 0px;
 }
 
 .content__container {
@@ -140,7 +151,7 @@
 }
 
 @media screen and (min-width: 1025px) {
-    .footer {
+    .Footer {
         padding: 40px 10px 0px;
     }
 
@@ -150,6 +161,12 @@
         flex-direction: row;
         justify-content: space-around;
         row-gap: 20px;
+    }
+
+    .AccountFooterContent {
+        /* transform: translateX(135px); */
+        padding-left: 250px;
+        text-align: center;
     }
 
     .newsletter_address_phone_socials {

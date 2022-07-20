@@ -1,5 +1,6 @@
 .account_layout__wrapper {
     display: flex;
     justify-content: space-between;
-    
+    max-width: 1800px;
+    margin: 0px auto;
 }

@@ -6,20 +6,14 @@ import { SessionProvider } from 'next-auth/react';
 import '../Components/Login/login.modules.css'
 import '../Components/Register/register.modules.css'
 
-import '../Components/Navigation/navigation.modules.css';
 import '../Components/Hero/hero.modules.css';
 import '../Components/MeetandGreet/meet-and-greet.modules.css';
 import '../Components/Review/review.modules.css';
 import '../Components/Team/team.modules.css';
 
-// Account Pages Styling
-import '../Components/AccountSidebar/account-sidebar.modules.css';
-import '../Components/Account/PetProfile/pet-profile.modules.css';
-import '../Components/Account/HumanProfile/human-profile.modules.css';
-import '../Components/Account/Appointments/appointments.modules.css'
+
 
 // Pet Profile Page
-import '../Components/PetProfile/pet-profile.modules.css'
 import Navigation from '../Components/Navigation';
 import Footer from '../Components/Footer';
 import AuthWrapper from '../Components/AuthWrapper';
