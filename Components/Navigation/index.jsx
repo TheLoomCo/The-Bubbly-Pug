@@ -74,7 +74,7 @@ const Navigation = () => {
                     {
 
                         session && (
-                            <li style={{ color: "#fff", textAlign: "center", cursor: "pointer" }} onClick={() => setToggleAccountMenu(prev => !prev)} >Account
+                            <li style={{ color: "#fff", textAlign: "center", cursor: "pointer", position: "relative" }} onClick={() => setToggleAccountMenu(prev => !prev)} >Account
                                 <ul className={toggleAccountMenu ? styles.AccountDropdown : styles.AccountDropdownHide}>
 
                                     <li><Link href="/account/dashboard"><a onClick={handleCloseAccountMenu} className={`${router.pathname === "/account" ? styles.active : ''}`}>Dashboard</a></Link></li>
