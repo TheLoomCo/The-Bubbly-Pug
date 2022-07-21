@@ -10,11 +10,12 @@ const Navigation = () => {
     const { data: session, status } = useSession();
 
     const [toggleMobileMenu, setToggleMobileMenu] = useState(false);
+    const [toggleAccountMenu, setToggleAccountMenu] = useState(false);
 
     useEffect(() => {
         document.querySelectorAll('li a').forEach((link) => {
             link.addEventListener('click', () => {
-                setToggleMobileMenu(false)
+                setToggleMobileMenu(false);
             });
         });
 
@@ -23,7 +24,8 @@ const Navigation = () => {
 
     const handleSignin = () => {
         signIn('google', {
-            callbackUrl: 'https://bubbly-pug.vercel.app/account/dashboard'
+            // callbackUrl: 'https://bubbly-pug.vercel.app/account/dashboard'
+            callbackUrl: 'http://localhost:3000/account/dashboard'
         })
     }
 
@@ -32,6 +34,8 @@ const Navigation = () => {
             callbackUrl: 'https://bubbly-pug.vercel.app/'
         })
     }
+
+    const handleCloseAccountMenu = () => setToggleAccountMenu(false);
 
     return (
         <div className={styles.navbar_style__wrapper}>
@@ -56,7 +60,7 @@ const Navigation = () => {
                     <div className={styles.line3}></div>
                 </button>
 
-                <ul className={toggleMobileMenu ? styles.navlist.active_links : styles.nav_list} id="navigationLinks">
+                <ul className={toggleMobileMenu ? styles.active_links : styles.nav_list} id="navigationLinks">
                     <li><Link href="/"><a className={`${router.pathname === "/" ? styles.active : ''}`}>Home</a></Link></li>
 
                     <li><Link href="/about"><a className={`${router.pathname === "/about" ? styles.active : ''}`}>About</a></Link></li>
@@ -64,13 +68,23 @@ const Navigation = () => {
                     <li><Link href="/services"><a className={`${router.pathname === "/services" ? styles.active : ''}`}>Services</a></Link></li>
 
                     <li><Link href="/#meetAndGreet"><a className={`${router.pathname === "/#meetAndGreet" ? styles.active : ''}`}>Meet and Greet</a></Link></li>
-                    {
-                        session && (
-                            <li><Link href="/account/dashboard"><a className={`${router.pathname === "/account" ? styles.active : ''}`}>Account</a></Link></li>
-                        )
-                    }
+
                     <li><Link href="/contact"><a className={`${router.pathname === "/contact" ? styles.active : ''}`}>Contact</a></Link></li>
 
+                    {
+
+                        session && (
+                            <li style={{ color: "#fff", textAlign: "center", cursor: "pointer" }} onClick={() => setToggleAccountMenu(prev => !prev)} >Account
+                                <ul className={toggleAccountMenu ? styles.AccountDropdown : styles.AccountDropdownHide}>
+
+                                    <li><Link href="/account/dashboard"><a onClick={handleCloseAccountMenu} className={`${router.pathname === "/account" ? styles.active : ''}`}>Dashboard</a></Link></li>
+                                    <li><Link href="/account/pet-profile"><a onClick={handleCloseAccountMenu} className={`${router.pathname === "/account" ? styles.active : ''}`}>Pet Profile</a></Link></li>
+                                    <li><Link href="/account/create-pet-profile"><a onClick={handleCloseAccountMenu} className={`${router.pathname === "/account" ? styles.active : ''}`}>Create Pet Profile</a></Link></li>
+
+                                </ul>
+                            </li>
+                        )
+                    }
                     {status === 'unauthenticated' && (
                         <button className={styles.auth__btn} type="button"
                             onClick={handleSignin}>

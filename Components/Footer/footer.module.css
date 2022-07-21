@@ -23,6 +23,11 @@
     row-gap: 0px;
 }
 
+.AccountFooterContent {
+
+    text-align: center;
+}
+
 .content__container {
     display: flex;
     flex-direction: column;
@@ -37,7 +42,7 @@
     align-items: center;
     row-gap: 16px;
     text-align: center;
- }
+}
 
 
 .newsletter_address_phone_socials {
@@ -127,7 +132,7 @@
         flex-direction: column;
         row-gap: 20px;
     }
-    
+
     .footer-content__container label {
         font-size: 1.4rem;
         letter-spacing: 0.5px;
@@ -145,7 +150,7 @@
 
     .business__info {
         align-items: center;
-     }
+    }
 
 
 }
@@ -163,11 +168,7 @@
         row-gap: 20px;
     }
 
-    .AccountFooterContent {
-        /* transform: translateX(135px); */
-        padding-left: 250px;
-        text-align: center;
-    }
+
 
     .newsletter_address_phone_socials {
         display: flex;
@@ -230,5 +231,12 @@
         column-gap: 14px;
         font-size: 1.4rem;
         margin-top: 0px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .AccountFooterContent {
+        padding-left: 250px;
+        text-align: center;
     }
 }

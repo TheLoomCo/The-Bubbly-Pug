@@ -32,3 +32,12 @@ ul {
     -webkit-background-clip: text;
     -webkit-text-fill-color: #4e6e8d38;
   }
+
+  .header__icon {
+    transform: rotateZ(-20deg);
+    transition: transform 0.2s ease;
+}
+
+.header__icon:hover  {
+    transform: rotateZ(0deg);
+}

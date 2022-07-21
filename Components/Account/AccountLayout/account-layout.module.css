@@ -1,6 +1,7 @@
-.account_layout__wrapper {
+.Wrapper {
     display: flex;
     justify-content: space-between;
     max-width: 1800px;
     margin: 0px auto;
+    min-height: 100vh;
 }

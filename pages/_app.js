@@ -2,11 +2,7 @@ import '../styles/globals.css'
 import Head from 'next/head'
 import { SessionProvider } from 'next-auth/react';
 
-// Login/Register Page
-import '../Components/Login/login.modules.css'
-import '../Components/Register/register.modules.css'
 
-import '../Components/Hero/hero.modules.css';
 import '../Components/MeetandGreet/meet-and-greet.modules.css';
 import '../Components/Review/review.modules.css';
 import '../Components/Team/team.modules.css';

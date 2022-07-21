@@ -38,7 +38,7 @@
     transition: background-color 0.2s ease;
     max-width: 1800px;
     margin: 0px auto;
-    
+
 }
 
 .navbar {
@@ -60,7 +60,7 @@
     color: #fff;
 }
 
-.nav_list.active_links {
+.active_links {
     display: flex;
     flex-direction: column;
     top: 90px;
@@ -74,10 +74,15 @@
     height: calc(100vh - 90px);
     width: 100%;
     position: absolute;
+
 }
 
-.nav_list.active_links li {
+/* .active_links li {
     transform: translateY(-200%);
+} */
+
+.active_links li a {
+    color: #fff;
 }
 
 .nav_list li a {
@@ -85,41 +90,8 @@
     position: relative;
 }
 
-.account__dropdown {
-    cursor: pointer;
-    position: relative;
-    z-index: 10;
-}
-
-.account-menu__dropdown {
-    display: none;
-}
-
-.account-dropdown__close-icon {
-	position: absolute;
-	top: 10px;
-	right: 10px;
-	color: #fff;
-	font-size: 2rem;
-}
 
 
-.account-menu__dropdown.show-account-menu {
-	width: 300px;
-	position: absolute;
-	top: 0px;
-	left: -110px;
-	top: 45px;
-	display: flex;
-	flex-direction: column;
-	background-color: #0D2732;
-	align-items: center;
-	justify-content: center;
-	height: 140px;
-	row-gap: 20px;
-	padding-top: 90px;
-    border-radius: 10px;
-}
 
 .auth__btn {
     background-color: rgb(250, 188, 180, 90%);
@@ -137,15 +109,58 @@
     transition: background-size 0.3s ease;
 }
 
+.AccountDropdown {
+    position: absolute;
+    bottom: 40px;
+    left: 0px;
+    right: 0px;
+    background-color: #172d35;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    z-index: 999;
+    padding: 22px 0px;
+}
+
+.AccountDropdownHide {
+    display: none;
+}
 
 @media screen and (min-width: 1025px) {
+
+    .AccountDropdown {
+        width: 370px;
+        top: 70px;
+        left: unset;
+        background-color: #001B26;
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+        bottom: unset;
+        padding-bottom: 40px;
+        border-radius: 0px 0px 10px 10px;
+        animation: account 0.2s ease forwards;
+    }
+
+    @keyframes account {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+
 
     .auth__btn {
         background-size: 5%;
     }
-.auth__btn:hover {
-    background-size: 100%;
-}
+
+    .auth__btn:hover {
+        background-size: 100%;
+    }
 
 
     #mobileMenuTrigger {
@@ -200,8 +215,6 @@
         position: relative;
     }
 
-
-
     .nav_list li a::before {
         display: inline;
         content: '';
@@ -227,32 +240,9 @@
         background-color: #fff;
         height: 2px;
         transition: width 0.5s ease;
-    } 
-
+    }
 
     .nav_list li a.active:hover::before {
         width: 50%;
     }
-
-    
-.account-menu__dropdown.show-account-menu {
-    padding: 20px;
-    width: 300px;
-    position: absolute;
-    top: 40px;
-    left: -110px;
-    display: flex;
-    flex-direction: column;
-    row-gap: 10px;
-    background-color: #001B26;
-}
-
-.account-dropdown__close-icon {
-	position: absolute;
-	top: 10px;
-	right: 10px;
-	color: #fff;
-	font-size: 2rem;
-}
-
 }

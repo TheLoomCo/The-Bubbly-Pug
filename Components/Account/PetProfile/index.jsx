@@ -1,9 +1,13 @@
 import React from 'react'
+import styles from './pet-profile.module.css';
 
-const PetProfile = () => {
+const PetProfileComp = () => {
     return (
-        <div>PetProfile</div>
+        <main className={styles.Wrapper}>
+
+            <h1>Pet Profile</h1>
+        </main>
     )
 }
 
-export default PetProfile
+export default PetProfileComp

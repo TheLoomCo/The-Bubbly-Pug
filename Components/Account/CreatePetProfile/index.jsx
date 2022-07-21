@@ -1,8 +1,24 @@
 import React, { useState } from 'react'
 import { FaPaw } from 'react-icons/fa'
+import { AiOutlineClose } from 'react-icons/ai'
 import styles from './create-pet-profile.module.css';
+import { toast, ToastContainer } from 'react-toastify';
 
 const PetProfileForm = () => {
+    const [upload, setUpload] = useState(false);
+    const handleUpload = () => {
+        setUpload(true);
+        toast.error('Functionality Disabled', {
+            position: "top-right",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable: false,
+            progress: undefined,
+        })
+    }
+
     return (
         <div className={styles.pet_profile__section}>
             <h1 className={styles.pet_profile__header}>Pet <span><FaPaw /></span>file</h1>
@@ -10,6 +26,9 @@ const PetProfileForm = () => {
 
                 {/* Medications, neutered / spayed (checkbox), delete profile button  */}
                 <fieldset className={styles.pet_profile__fieldset}>
+                    {upload && (
+                        <ToastContainer />
+                    )}
                     <label htmlFor="petPhoto" className={styles.pet_profile_image_upload__label}>
                         <pre className={styles.text}>
                             {`Click to Upload 
@@ -17,7 +36,7 @@ Your Pet's Favorite Photo!`}
                         </pre>
                     </label>
                     {/* <button id="custom-btn">Choose a file</button> */}
-                    <input id="petPhoto" type="file" hidden />
+                    <input onChange={handleUpload} id="petPhoto" type="file" hidden />
                 </fieldset>
 
                 <fieldset className={styles.pet_name__fieldset}>

@@ -96,14 +96,7 @@
         line-height: 0.8;
     }
 
-    .header__icon {
-        transform: rotateZ(-20deg);
-        transition: transform 0.2s ease;
-    }
-
-    .header__icon:hover  {
-        transform: rotateZ(0deg);
-    }
+ 
 
     .behind_the_scenes__descriptions {
         max-width: 1200px;

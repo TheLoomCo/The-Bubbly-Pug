@@ -47,7 +47,7 @@ const AboutComp = () => {
 
                 </article>
             </div>
-            <Link href="/#meetAndGreet"><a className={styles.cta} type="submit"><FaPaw />Book a Meet and Greet!<FaPaw /></a></Link>
+            {/* <Link href="/#meetAndGreet"><a className={styles.cta} type="submit"><FaPaw />Book a Meet and Greet!<FaPaw /></a></Link> */}
         </div>
     )
 }
