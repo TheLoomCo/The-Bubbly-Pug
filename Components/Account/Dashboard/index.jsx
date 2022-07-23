@@ -17,6 +17,16 @@ const DashboardComp = () => {
                 </div>
             </header>
 
+            <div className={styles.PetProfileList}>
+                <h2>Your Pet Profiles</h2>
+                <Link href="/account/pet-profile">Loki</Link>
+                <Link href="/account/pet-profile">Tidus</Link>
+                <Link href="/account/pet-profile">Luna</Link>
+                <Link href="/account/pet-profile">Charlie</Link>
+            </div>
+
+            <hr style={{ width: "100%", marginTop: "30px", opacity: '0.2' }} />
+
             <div className={styles.account_history__table}>
                 <h2>History</h2>
 
@@ -69,34 +79,9 @@ const DashboardComp = () => {
                     </div>
                 </div>
 
-                {/* 
-                    
-
-                    <div className={styles.account_history__past_appointment}>
-                        <p>07/10/1993</p>
-                    </div>
-
-                    <div className={styles.account_history__past_appointment}>
-                        <p>07/10/2018</p>
-                    </div>
-                </div>
-
-                <div className={styles.account_history__column_two}>
-                    <p className={styles.account_history__header}>Pet Name</p>
-
-                    <div className={styles.account_history__pet_name}>
-                        <Link href="/account/pet-profile">Loki</Link>
-                        <Link href="/account/pet-profile">Luna</Link>
-                    </div>
-
-                    <div className={styles.account_history__pet_name}>
-                        <Link href="/account/pet-profile">Tidus</Link>
-                        <Link href="/account/pet-profile">Loki</Link>
-                        <Link href="/account/pet-profile">Luna</Link>
-                    </div>
-                </div> */}
-
             </div>
+
+
         </main>
     )
 }

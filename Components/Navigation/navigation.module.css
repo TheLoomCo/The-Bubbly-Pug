@@ -66,6 +66,7 @@
     flex-direction: column; */
     display: grid;
     justify-items: center;
+    /* align-content: center; */
     top: 90px;
     left: 0px;
     right: 0px;
