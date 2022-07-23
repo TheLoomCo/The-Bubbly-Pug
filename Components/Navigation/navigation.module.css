@@ -72,10 +72,10 @@
     background-color: #001B26;
     row-gap: 50px;
     font-size: 1.2rem;
-    /* height: calc(100vh - 90px); */
+    height: calc(100vh - 90px);
+    overflow-y: scroll;
     /* width: 100%; */
     position: absolute;
-    border: 1px solid #fff;
 
 }
 
@@ -128,12 +128,12 @@
     display: none;
 }
 
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1200px) {
 
     .AccountDropdown {
-        width: 370px;
-        top: 70px;
-        left: unset;
+        width: 643px;
+        top: 63px;
+        left: -282px;
         background-color: #001B26;
         display: flex;
         flex-direction: column;
