@@ -81,16 +81,18 @@
 .GridContent:nth-last-child(1) {
     margin-bottom: 0px;
     border-radius: 0px 0px 10px 10px;
+    padding-bottom: 20px;
 }
 
 .PetNamesContainer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    justify-items: center;
     column-gap: 10px;
-    row-gap: 5px;
+    row-gap: 10px;
     font-size: 1.1rem;
     padding: 8px;
+    width: 90%;
 }
 
 

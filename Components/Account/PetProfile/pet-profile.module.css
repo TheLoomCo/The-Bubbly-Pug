@@ -1,5 +1,40 @@
 .Wrapper {
     flex: 5;
-    height: calc(100vh - 100px);
     padding-top: 100px;
+    padding: 100px 10px 0px;
+}
+
+.Information {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    width: 98%;
+    margin: 30px auto;
+    row-gap: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.ImageContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.Information div {
+
+    column-gap: 20px;
+    width: 100%;
+}
+
+.Information ul {
+    list-style: circle;
+    padding-left: 20px;
+}
+
+.Information li {
+    margin-top: 15px;
+}
+
+.Information h6 {
+    font-size: 1.3rem;
+    line-height: 1.7;
 }

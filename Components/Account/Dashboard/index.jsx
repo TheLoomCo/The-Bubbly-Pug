@@ -34,7 +34,6 @@ const DashboardComp = () => {
                         <div className={styles.PetNamesContainer}>
                             <Link href="/account/pet-profile">Loki</Link>
                             <Link href="/account/pet-profile">Luna</Link>
-                            <Link href="/account/pet-profile">Tidus</Link>
                         </div>
                     </div>
 
@@ -44,19 +43,28 @@ const DashboardComp = () => {
                         </div>
                         <div className={styles.PetNamesContainer}>
                             <Link href="/account/pet-profile">Loki</Link>
-                            <Link href="/account/pet-profile">Luna</Link>
+                        </div>
+                    </div>
+
+                    <div className={styles.GridContent}>
+                        <div className={styles.account_history__past_appointment}>
+                            <p>10/10/2022</p>
+                        </div>
+                        <div className={styles.PetNamesContainer}>
+                            <Link href="/account/pet-profile">Loki</Link>
                             <Link href="/account/pet-profile">Tidus</Link>
                         </div>
                     </div>
 
                     <div className={styles.GridContent}>
                         <div className={styles.account_history__past_appointment}>
-                            <p>010/10/2022</p>
+                            <p>11/10/2022</p>
                         </div>
                         <div className={styles.PetNamesContainer}>
                             <Link href="/account/pet-profile">Loki</Link>
-                            <Link href="/account/pet-profile">Luna</Link>
                             <Link href="/account/pet-profile">Tidus</Link>
+                            <Link href="/account/pet-profile">Luna</Link>
+                            <Link href="/account/pet-profile">Charlie</Link>
                         </div>
                     </div>
                 </div>

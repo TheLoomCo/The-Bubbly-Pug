@@ -4,7 +4,7 @@ import { useRouter } from 'next/router';
 import Image from 'next/image'
 import { useSession, signOut, signIn } from 'next-auth/react';
 import styles from './navigation.module.css'
-
+import { AiOutlineClose } from 'react-icons/ai'
 const Navigation = () => {
     const router = useRouter();
     const { data: session, status } = useSession();
@@ -77,9 +77,9 @@ const Navigation = () => {
                             <li style={{ color: "#fff", textAlign: "center", cursor: "pointer", position: "relative" }} onClick={() => setToggleAccountMenu(prev => !prev)} >Account
                                 <ul className={toggleAccountMenu ? styles.AccountDropdown : styles.AccountDropdownHide}>
 
-                                    <li><Link href="/account/dashboard"><a onClick={handleCloseAccountMenu} className={`${router.pathname === "/account" ? styles.active : ''}`}>Dashboard</a></Link></li>
-                                    <li><Link href="/account/pet-profile"><a onClick={handleCloseAccountMenu} className={`${router.pathname === "/account" ? styles.active : ''}`}>Pet Profile</a></Link></li>
-                                    <li><Link href="/account/create-pet-profile"><a onClick={handleCloseAccountMenu} className={`${router.pathname === "/account" ? styles.active : ''}`}>Create Pet Profile</a></Link></li>
+                                    <li><Link href="/account/dashboard" onClick={handleCloseAccountMenu}><a className={`${router.pathname === "/account" ? styles.active : ''}`}>Dashboard</a></Link></li>
+                                    <li><Link href="/account/pet-profile" onClick={handleCloseAccountMenu} ><a className={`${router.pathname === "/account" ? styles.active : ''}`}>Pet Profile</a></Link></li>
+                                    <li><Link href="/account/create-pet-profile" onClick={handleCloseAccountMenu} ><a className={`${router.pathname === "/account" ? styles.active : ''}`}>Create Pet Profile</a></Link></li>
 
                                 </ul>
                             </li>

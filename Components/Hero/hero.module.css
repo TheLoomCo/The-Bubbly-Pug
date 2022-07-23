@@ -112,7 +112,8 @@
     }
 
     .parallax {
-        background-image: url("/images/hero-img-square.png");
+        /* background-image: url("/images/hero-img-square.png"); */
+        background-image: url("/images/hero-b.png");
         min-height: 100vh;
         background-attachment: fixed;
         background-position: top;
