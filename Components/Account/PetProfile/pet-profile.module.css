@@ -25,6 +25,10 @@
     width: 100%;
 }
 
+.PetDescription span {
+    font-weight: bold;
+}
+
 .Information ul {
     list-style: circle;
     padding-left: 20px;

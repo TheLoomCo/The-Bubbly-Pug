@@ -8,7 +8,7 @@ const HeroSection = ({ title, cta }) => {
     return (
         <section id="heroSection" className={styles.HeroSection}>
             <div className={styles.parallax}></div>
-            <img className={styles.MobileImg} src="/images/hero-img-square.png" alt="The Bubbly Pug" />
+            <img className={styles.MobileImg} src="/images/hero-b.png" alt="The Bubbly Pug" />
             <div className={styles.overlay}></div>
             <div className={styles.HeroCta}>
                 <h1><pre>{title}</pre></h1>

@@ -9,19 +9,23 @@ const PetProfileComp = () => {
                 <div className={styles.ImageContainer}>
                     <Image src="/images/hero-b.png" alt="Bubbly Pug Animal Profile Picture, Tidus" height="200" width="200" objectFit="cover" style={{ borderRadius: "20px" }} />
                 </div>
-                <div style={{ display: "flex", justifyContent: "space-between" }}>
+                {/* <div style={{ display: "flex", justifyContent: "space-between" }}>
                     <p>My name is Tidus!</p>
                     <p>I am 9 years old.</p>
-                </div>
+                </div> */}
 
-                <div style={{ display: "flex", justifyContent: "space-between" }}>
+                {/* <div style={{ display: "flex", justifyContent: "space-between" }}>
                     <p>I am a Male.</p>
                     <p>I am of the Pug breed.</p>
-                </div>
+                </div> */}
+                <p className={styles.PetDescription}>My name is <span>Tidus</span>! I am <span>9 years old </span> and of the <span>Pug</span> breed. I currently weigh <span>12 pounds. </span>I am a <span>Male</span> and thankfully have <span>not been neutered</span>....yet!</p>
+                {/* <p>I am 9 years old.</p>
+                <p>I am a Male.</p>
+                <p>I am of the Pug breed.</p>
 
                 <p>I weigh 12 pounds. Don't judge me!</p>
 
-                <p>I have not be neutered yet (whew!)</p>
+                <p>I have not be neutered yet (whew!)</p> */}
 
 
                 <div>
